@@ -1,0 +1,7 @@
+#for file in ./*; do
+# ls -1v lists in numberical order
+# $1* lets me pass the number that I want to limit the search to.
+for file in $(ls -1v $1*);do
+	a=$(head -n1 ${file#/*})
+	echo ${file##*/} $a
+done
